@@ -1,0 +1,44 @@
+<p>The general request formula is http://128.150.10.70/py/api/[[object]]?[[params]]. Only change the object and parameter values! The object you are searching for is “organization”. The search parameter that you use is “q” since you are asking for a simple search query looking for organizations with the name “Harvard”.  Since in order to use “q”, you need to use with “page=search”, the url becomes: http://128.150.10.70/py/api/organization?page=search&amp;q=Harvard. (You use “&amp;” to combine the two parameters together.)</p>
+<p>Reading the output. you see a “count” of 25 (since the query is capped at 25). This list shows the unique “nsf_id” (National Science Foundation identifier) along with the “name” of the organization. Some organizations that appear include: "MUSEUM OF COMP ZOO HARVARD UNIV", "President and Fellows of Harvard College", "PRES AND FELLOWS OF HARVARD COLLEGE", "KENNEDY SCH OF GOV DAS HARVARD UNIV", and "Harvard University Center for Hellenic Studies (Washington DC)". There may be some other information listed about each organization, such as its address.</p>
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api/organization?page=search&q=Harvard" target="_blank">http://128.150.10.70/py/api/organization?page=search&amp;q=Harvard</a>
+</div>
+<pre>
+{
+    "count": 25,
+    "data": [
+        {
+            "nsf_id": "9000000798", 
+            "name": "MUSEUM OF COMP ZOO HARVARD UNIV"
+        }, 
+        {
+            "nsf_id": "5300006450", 
+            "name": "President and Fellows of Harvard College", 
+            "address": {
+                "city": "Cambridge", 
+                "state": "MA", 
+                "country": "US"
+            }
+        }, 
+        {
+            "nsf_id": "7203576368", 
+            "name": "President and Fellows of Harvard College", 
+            "address": {
+                "city": "Boston", 
+                "state": "MA", 
+                "country": "US"
+            }
+        }, 
+{truncated}
+</pre>
+<h4>What happens if you add in an organization id?</h4>
+<p>If you decide to add in organization 0013706000 into the search query, you set the id equal to the id number:</p>
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api/organization?id=0013706000&page=search&q=harvard" target="_blank">http://128.150.10.70/py/api/organization?id=0013706000&amp;page=search&amp;q=harvard</a>
+</div>
+<p>This results in the same output as without an organization id (such as above). Therefore, the search term does not take into account the id of the organization.</p>
+<h4>What if you want to export the data into excel?</h4>
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api/organization?id=0013706000&page=search&q=harvard&format=csv" target="_blank">http://128.150.10.70/py/api/organization?id=0013706000&amp;page=search&amp;q=harvard&amp;format=csv</a>
+</div>
+<p>The same link with “&amp;format=csv” in the end allows you to download the data into CSV file, usable in excel. (Remember that nsf_id numbers sometimes get guessed improperly with this method as leading zeros are dropped. You will have to add them back in in order to use nsf_id numbers.)</p>

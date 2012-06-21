@@ -1,0 +1,33 @@
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api.py/organization?&id=0290452000">http://128.150.10.70/py/api/organization?&amp;id=0290452000</a>
+</div>
+<p>To find basic information on an unique organization, identify that you are looking for an “organization” in the [[object]] field and limit it by its id (id=0290452000) in the [[params]] field. </p>
+<p>The output shows the organization’s unique identifiers/codes (nsf_id, duns, ein) and contact information.</p>
+<pre>
+{
+    "count": 1, 
+    "data": [
+        {
+            "nsf_id": "0290452000", 
+            "name": "Northeastern Ohio University College of Medicine", 
+            "email": "user@school.edu", 
+            "phone": "5555555555", 
+            "flag": [
+                "duns_updt"
+            ], 
+            "address": {
+                "city": "City", 
+                "zip": "442729698", 
+                "country": "US", 
+                "CD": "17", 
+                "state": "OH", 
+                "street": "1405 Main St", 
+                "street_additional": "PO Box 999"
+            }, 
+            "duns": "077777777", 
+            "class": "B06", 
+            "ein": "123456789"
+        }
+    ]
+}
+</pre>

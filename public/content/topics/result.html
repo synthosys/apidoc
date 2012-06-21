@@ -1,0 +1,191 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Description</td>
+      <td>Returns</td>
+    </tr>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td>Topic ID</td>
+      <td>ID number</td>
+    </tr>
+    <tr>
+      <td>nsf_id</td>
+      <td>NSF Topic ID</td>
+      <td>NSF Topic ID number </td>
+    </tr>
+    <tr>
+      <td>topic</td>
+      <td>Topic keywood details, including all applicable ids and all applicable words</td>
+      <td>
+        <p>id: ID numbers (may be a list)</p>
+        <p><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td>prg</td>
+      <td>Organization details</td>
+      <td>
+        <p>code: Numerical organization code</p>
+        <p>name: Organization name (usually an abbreviation)</p>
+        <p>full: Full name of organization</p>
+      </td>
+    </tr>
+    <tr>
+      <td>proposal</td>
+      <td>Proposal details</td>
+      <td>
+        <p>nsf_id: ID number</p>
+        <p>title: Title</p>
+      </td>
+    </tr>
+    <tr>
+      <td>pge</td>
+      <td>Program element code, specific to NSF</td>
+      <td>
+        <p>code: Program element code</p>
+        <p>name: Name of program</p>
+        <p>full: Full name of program</p>
+        <p>date: Date</p>
+      </td>
+    </tr>
+    <tr>
+      <td>awarded</td>
+      <td>Award details</td>
+      <td>
+        <p>date: Date</p>
+        <p>duration: Number of months</p>
+        <p>dollar: Dollar amount</p>
+      </td>
+    </tr>
+    <tr>
+      <td>request</td>
+      <td>Request details</td>
+      <td>
+        <p>date: Date</p>
+        <p>duration: Number of months</p>
+        <p>dollar: Dollar amount</p>
+      </td>
+    </tr>
+    <tr>
+      <td>label</td>
+      <td>Topic label</td>
+      <td>Label</td>
+    </tr>
+    <tr>
+      <td>status</td>
+      <td>Status of a proposal or grant, whether it has been awarded</td>
+      <td>
+        <p>date:  Date</p>
+        <p>code: “award” (awarded); “decline” (declined); “propose” (not yet awarded or declined)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>inst</td>
+      <td>A list of the User's institution history</td>
+      <td>
+        <p>name: Name</p>
+        <p>nsf_id: NSF ID number</p>
+        <p>position: Title</p>
+        <p>dept: Department</p>
+        <p>start_date: Start date</p>
+        <p>end_date: End date</p>
+      </td>
+    </tr>
+    <tr>
+      <td>count</td>
+      <td>Number of observations</td>
+      <td>A number</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>User full name</td>
+      <td>Full name</td>
+    </tr>
+    <tr>
+      <td>prop</td>
+      <td>Proposal ID</td>
+      <td>ID number</td>
+    </tr>
+    <tr>
+      <td>nsf_id</td>
+      <td>NSF ID (i.e. for user)</td>
+      <td>
+        <p>pi_id: PI ID</p>
+        <p>revw_id: Reviewer ID</p>
+      </td>
+    </tr>
+    <tr>
+      <td>words</td>
+      <td>Topic words</td>
+      <td>Topic keywords</td>
+    </tr>
+    <tr>
+      <td>pi</td>
+      <td>PI (collaborator) details</td>
+      <td>
+        <p>nsf_id: NSF ID number</p>
+        <p>name: Name</p>
+        <p>dept: Department</p>
+      </td>
+    </tr>
+    <tr>
+      <td>fiscal_year</td>
+      <td>Fiscal year</td>
+      <td>Fiscal year</td>
+    </tr>
+    <tr>
+      <td>awarded_dollar</td>
+      <td>Dollars awarded (only when (“status” = “award”)</td>
+      <td>Dollars awarded</td>
+    </tr>
+    <tr>
+      <td>request_dollar</td>
+      <td>Requested funding</td>
+      <td>Dollars requested</td>
+    </tr>
+    <tr>
+      <td>patent</td>
+      <td>Patent number</td>
+      <td>Patent ID</td>
+    </tr>
+    <tr>
+      <td>abstract</td>
+      <td>Patent abstract</td>
+      <td>Summary of patent</td>
+    </tr>
+    <tr>
+      <td>grant_year</td>
+      <td>Year patent was granted</td>
+      <td>Year</td>
+    </tr>
+    <tr>
+      <td>assignee</td>
+      <td>Patent’s owner</td>
+      <td>Name</td>
+    </tr>
+    <tr>
+      <td>application_year</td>
+      <td>Year of patent application</td>
+      <td>Year</td>
+    </tr>
+    <tr>
+      <td>classes</td>
+      <td>Patent classes</td>
+      <td>Class number (may be a list)</td>
+    </tr>
+    <tr>
+      <td>inventors</td>
+      <td>Inventors’ identification</td>
+      <td>
+        <p>name: Inventor name</p>
+        <p>patent_id: Patent ID </p>
+        <p>nsf_id: Inventor’s NSF ID (not always returned)</p>
+      </td>
+    </tr>
+  </tbody>
+</table>

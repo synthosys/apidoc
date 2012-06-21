@@ -1,0 +1,51 @@
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api.py/topic?org=CHE&year=2005&page=patent"> http://128.150.10.70/py/api/topic?org=CHE&amp;year=2005&amp;page=patent</a>
+</div>
+<p>Using page=patent[[params]], you can find patents filed for in a particular year (“application_year”) within a certain division (“org”). In this example the [[params]] are org=CHE (chemistry department) and year=2005 (application year 2005). 479 patents and their information, including title, abstract, and grant_year are pulled.</p>
+<pre>
+{
+    "count": 999, 
+    "data": [
+        {
+            "title": "Title", 
+            "patent": "6991234", 
+            "abstract": "Abstract", 
+            "grant_year": 2006, 
+            "assignee": "ASSIGNEE", 
+            "application_year": "2005", 
+            "classes": [
+                "252"
+            ], 
+            "inventors": [
+                {
+                    "name": "JOHN B SMITH", 
+                    "patent_id": "01234567-1"
+                }, 
+                {
+                    "nsf_id": "000012345", 
+                    "name": "JENNIFER LEE", 
+                    "patent_id": "05012345-2"
+                }, 
+                {
+                    "nsf_id": "000123456", 
+                    "name": "JACK THOMPSON", 
+                    "patent_id": "01234567-2"
+                }, 
+                {
+                    "nsf_id": "000123456", 
+                    "name": "JOY POWELL", 
+                    "patent_id": "01234567-4"
+                }, 
+                {
+                    "nsf_id": "000123451", 
+                    "name": "LEE SMITH", 
+                    "patent_id": "01234567-2"
+                }, 
+                {
+                    "name": "JIM J JACKSON", 
+                    "patent_id": "01234556-4"
+                }
+            ]
+        }, 
+{truncated}
+</pre>

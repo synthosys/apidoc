@@ -1,0 +1,101 @@
+#content path
+content_path: "/public/content/"
+#a structure to hold the api components
+resources: {
+	introduction: {
+		title: 'Introduction',
+		subhead: 'The STAR METRICS project is a partnership between science agencies and research institutions to document the outcomes of science investments to the public.',
+		overview: {},
+		request: {
+			title : 'General Request Formula',
+			subhead : 'Currently the government API is for private use within NSF internal networks.'		
+		},
+		examples: [
+			'You want to find organizations with the name Harvard in the database.',
+			'What if you want to graph award number and award dollar growth by year, from 2007 to 2009, for different pge awards within CMMI?'
+		]	
+	},
+	users:  {
+		title: User,
+		subhead: 'The user, or individual object, as represented as the person submitting the grant.',
+		request:  {},
+		result:  {},
+		connections:  {},
+		examples:  [
+		    '[default], user 269725860',
+		    'prop (proposal)',
+		    'pi (collaborators)',
+		    'search (using example of query search Smith in user\s name)',
+		    'patents',
+		    'rid, reviewer KH0784103'
+		]		
+	},
+	organizations:  {
+		title: 'Organization',
+		subhead: 'An individual organization (institution, company, etc.) as represented by an object.',
+		request:  {},
+		result:  {},
+		connections:  {},
+		examples:  [
+		    '[default], organization 0290452000',
+		    'flag (labels)',
+		    'prop (proposal)',
+		    'pi (collaborator)',
+		    'summ',
+		    'alias, using organization 0013706000, University of Colorado at Denver'
+		]		
+	},
+	proposals:  {
+		title: 'Proposal',
+		subhead: 'A submitted NSF proposal represented as an object.',
+		request:  {},
+		result:  {},
+		connections:  {},
+		examples:  [
+		    '[default], proposal 0311252',
+		    'search (using example of query search computing in proposal title)'
+		]		
+	},
+	panels:  {
+		title: 'Panel',
+		subhead: 'A group of reviewers represented as an object.',
+		request:  {},
+		result:  {},
+		connections:  {},
+		examples:  [		
+		    '[default], panel P111647',
+		    'pid, proposal 1063626',
+		    'rid, reviewer HS0817152'
+		]		
+	},
+	topics:  {
+		title: 'Topic',
+		subhead: 'Topic model keywords which are compiled based on collected data.',
+		overview:  {},
+		request:  {},
+		result:  {},
+		examples:  [
+		    '[default]',
+		    '[default], more than 1 topic: t1, t2, t3',
+		    '[default], more than 1 topic, with each topic matched with a topic number: t1=39, t2=397, t3=328',
+		    'org, limited to chemistry, CHE',
+		    'status, decline',
+		    'patent, application year 2005, org CHE',
+		    'grant, award, fiscal year 2009-2011, org CMMI and (pge) 1189',
+			'legend',
+		    'summ=[options]',
+		    'by PGE'
+		]		
+	},
+	patents:  {
+		title: 'Patent',
+		subhead: 'An individual patent object.',
+		overview:  {},
+		request:  {},
+		result:  {},
+		examples:  [		
+		    'legend',
+		    'legend, by class'
+		]		
+	}
+}

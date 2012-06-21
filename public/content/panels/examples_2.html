@@ -1,0 +1,52 @@
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api/panel?pid=1063626">http://128.150.10.70/py/api/panel?pid=1063626</a>
+</div>
+<p>To find panel information related to a particular proposal (prop), first identify that you are looking for a “panel” in the [[object]] field and limit it by its proposal id (pid=1063626) in the [[params]] field. </p>
+<p>The output shows all the panels associated with a given proposal 1063626. It shows the panel’s unique identifiers/codes (nsf_id), organization affiliations, and affiliated reviewers (revr).</p>
+<pre>
+{
+    "count": 2, 
+    "data": [
+        {
+            "nsf_id": "C123456", 
+            "pge": {
+                "code": "9999"
+            }, 
+            "name": "CMMI - Committee of Visitors", 
+            "prop": [
+                "0898766", 
+                "0898766", 
+                "0898766", 
+                "0898766", 
+                "0898766", 
+                "0898766", 
+                "0898766", 
+                "0898766", 
+                "0898766", 
+                "0898766",
+{truncated}
+], 
+            "officer": "GHAZELR", 
+            "address": {
+                "city": "Arlington", 
+                "state": "VA", 
+                "name": "Room 123"
+            }, 
+            "org": {
+                "code": "07123456", 
+                "name": "CMMI", 
+                "full": "Division of Civil, Mechanical, and Manufacturing Innovation"
+            }, 
+            "revr": [
+                "DB0999999", 
+                "DB0999999", 
+                "DB0999999", 
+                "DB0999999", 
+                "DB0999999", 
+                "DB0999999", 
+                "DB0999999", 
+                "DB0999999", 
+                "DB0999999",
+            ],
+{truncated}
+</pre>

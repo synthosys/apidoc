@@ -1,0 +1,31 @@
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api/topic?org=CMMI&year=2007-2009&status=award&summ=year,pge" target="_blank">http://128.150.10.70/py/api/topic?org=CMMI&amp;year=2007-2009&amp;status=award&amp;summ=year,pge</a>
+</div>
+<p>Running this query will give you an aggregated breakdown of award counts and award dollars broken into year and pge code within CMMI. Using this data, you can use to graph growth. (http://128.150.10.70/py/api/topic?org=CMMI&amp;year=2007-2009&amp;status=award&amp;summ=year,pge&amp;format=csv will make it easier to export the data to excel.)</p>
+<pre>
+{
+    "count": 78, 
+    "data": [
+        {
+            "count": 49, 
+            "awarded_dollar": 12345678, 
+            "pge": "1467", 
+            "request_dollar": 23456789, 
+            "year": "2009"
+        }, 
+        {
+            "count": 49, 
+            "awarded_dollar": 34567890, 
+            "pge": "1633", 
+            "request_dollar": 56789012, 
+            "year": "2009"
+        }, 
+        {
+            "count": 47, 
+            "awarded_dollar": 11234567, 
+            "pge": "1467", 
+            "request_dollar": 12345678, 
+            "year": "2007"
+        },
+	{truncated}
+</pre>

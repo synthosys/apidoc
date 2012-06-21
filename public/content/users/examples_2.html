@@ -1,0 +1,53 @@
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api/user?id=269725860&page=prop" target="_blank">http://128.150.10.70/py/api/user?id=269725860&amp;page=prop</a>
+</div>
+<p>To find a list of submitted proposals by the same individual, you add in “page=prop” in the [[params]] field. (You use “&amp;” to add additional parameters.) You use “page” because you are trying to find information specific to the individual user (by searching in his/her personal page). You set page=prop because prop refers to “proposals”. </p>
+<p>In this specific example, “award” means that the proposal was “awarded” (approved). The “count” refers to the number of proposals by the individual (19), separated by “decline” (11), “award” (5), and “propose” (3). data for each proposal shows the date the proposal was awarded, the unique identifier (nsf_id), the field of the topic (division) and the title of the proposal.</p>
+<pre>
+{
+    "count": 10, 
+    "data": {
+        "nsf": {
+            "decline": {
+                "count": 5, 
+                "data": [
+                    {
+                        "date": "1999/01/01", 
+                        "nsf_id": "1234567", 
+                        "division": "IIS", 
+                        "title": "Title 4"
+                    }, 
+                    {
+                        "date": "2004/01/01", 
+                        "nsf_id": "0312345", 
+                        "division": "DMS", 
+                        "title": "Title 6"
+                    },
+	{truncated}
+            "award": {
+                "count": 3, 
+                "data": [
+                    {
+                        "date": "2003/01/01", 
+                        "nsf_id": "0311123", 
+                        "division": "CCF", 
+                        "title": "Title 3"
+                    }, 
+                    {
+                        "date": "2006/01/01", 
+                        "nsf_id": "0612345", 
+                        "division": "CCF", 
+                        "title": "Title 2"
+                    },
+{truncated}
+    "propose": {
+                "count": 2, 
+                "data": [
+                    {
+                        "date": "2000/01/01", 
+                        "nsf_id": "0698765", 
+                        "division": "CCF", 
+                        "title": "Study of Medicine"
+                    },
+{truncated}
+</pre>

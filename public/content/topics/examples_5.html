@@ -1,0 +1,48 @@
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api.py/topic?org=CHE&year=2010&t1=39,397,328&status=decline">http://128.150.10.70/py/api/topic?org=CHE&amp;year=2010&amp;t1=39,397,328&amp;status=decline</a>
+</div>
+<p>Since the API includes private proposal data, proposals can have "award",  "decline" or "propose" status. </p>
+<p>To look for declined proposals in the same org with the same topic numbers as above, just attach “status=decline” to the end of the query using “&amp;”. (You can have a similar query for "award"  or "propose" as well.)</p>
+<p>The output includes additional request metadata, returning the request duration, date and dollar amounts. </p>
+<pre>
+{
+    "count": 29, 
+    "data": [
+        {
+            "status": {
+                "date": "2010/01/01", 
+                "code": "decline"
+            }, 
+            "pge": {
+                "code": "1123"
+            }, 
+            "request": {
+                "duration": "26", 
+                "date": "2010/01/01", 
+                "dollar": "990000"
+            }, 
+            "fiscal_year": "2010", 
+            "awarded": {
+                "duration": "0", 
+                "dollar": 0
+            }, 
+            "topic": {
+                "id": [
+                    "397", 
+                    "123", 
+                    "234", 
+                    "444"
+                ]
+            }, 
+            "org": {
+                "code": "03000000", 
+                "name": "CHE", 
+                "full": "Division of Chemistry"
+            }, 
+            "proposal": {
+                "nsf_id": "1000000", 
+                "title": "Title"
+            }
+        }, 
+{truncated}
+</pre>

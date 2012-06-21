@@ -1,0 +1,94 @@
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api/user?rid=KH0784103" target="_blank">http://128.150.10.70/py/api/user?rid=KH0784103</a>
+</div>
+<p>To find information about a particular reviewer, just set rid equal to the reviewer id (in this case, KH0784103) in [[params]]. For reviewer KH0784103, you see his contact information, name, affiliated institutions, etc. Note you also see his nsf_id, “269662605”. Therefore, you can use reviewer id “rid” to match with “nsf_id”. </p>
+<pre>
+{
+    "count": 1, 
+    "data": [
+        {
+            "nsf_id": "269662605", 
+            "first_name": "John", 
+            "last_name": "Smith", 
+            "middle_name": "B", 
+            "name": "John B Smith", 
+            "degree": {
+                "name": "PhD", 
+                "year": "1997"
+            }, 
+            "revr": [
+                "KH1234567"
+            ], 
+            "gender": "M", 
+            "phone": "5555555555", 
+            "inst": {
+                "dept": "Department of Systems Engineering", 
+                "state": "VA", 
+                "name": "University of Virginia Main Campus", 
+                "nsf_id": "0037457000"
+            }, 
+            "address": {
+                "city": "Charlottesville", 
+                "zip": "22904", 
+                "country": "US", 
+                "state": "VA", 
+                "street": "1500 Main St", 
+                "street_additional": "PO Box 123"
+            }, 
+            "pi": [
+                "269666666"
+            ], 
+            "email": "user@virginia.edu", 
+            "ethnicity": "NH"
+        }
+    ]
+}
+</pre>
+<p>As a check, if you use id=269662605 in [[params]], you will see both entries match </p>
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api/user?id=269662605" target="_blank">http://128.150.10.70/py/api/user?id=269662605</a>
+</div>
+<pre>
+{
+    "count": 1, 
+    "data": [
+        {
+            "nsf_id": "269662605", 
+            "first_name": "John", 
+            "last_name": "Smith", 
+            "middle_name": "B", 
+            "name": "John B Smith", 
+            "degree": {
+                "name": "PhD", 
+                "year": "1997"
+            }, 
+            "revr": [
+                "KH1234567"
+            ], 
+            "gender": "M", 
+            "phone": "5555555555", 
+            "inst": {
+                "dept": "Department of Systems Engineering", 
+                "state": "VA", 
+                "name": "University of Virginia Main Campus", 
+                "nsf_id": "0037457000"
+            }, 
+            "address": {
+                "city": "Charlottesville", 
+                "zip": "22904", 
+                "country": "US", 
+                "state": "VA", 
+                "street": "1500 Main St", 
+                "street_additional": "PO Box 123"
+            }, 
+            "pi": [
+                "269666666"
+            ], 
+            "email": "user@virginia.edu", 
+            "ethnicity": "NH"
+        }
+    ]
+}
+</pre>
+<p>Please note that you can get pi information from rid and nsf_id.</p>
+<p>Please also note that sometimes people are on panels even though they are not PIs. NSF assigns reviewers to individual proposals, which are then grouped into a panel to facilitate their review. There may be panelists that are not NSF PIs because NSF utilizes reviewers from many different institutions, including government employees, researchers funded by other government agencies, or researchers who last submitted to NSF over 10 years ago (who are considered inactive within NSF systems). </p>

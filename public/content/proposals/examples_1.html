@@ -1,0 +1,46 @@
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api.py/proposal?id=0311252">http://128.150.10.70/py/api/proposal?id=0311252</a>
+</div>
+<p>To find basic information on a specific proposal, first identify that you are looking for a “proposal” in the [[object]] field and limit it by its id (id=0311252) in the [[params]] field. </p>
+<p>The output shows the proposal’s unique identifiers/codes, organization affiliations, title, abstract, whether it was “awarded” (it was) and various status updates.</p>
+<pre>
+{
+    "count": 1, 
+    "data": [
+        {
+            "status": {
+                "date": "2003/01/01", 
+                "code": "99", 
+                "name": "award"
+            }, 
+            "nsf_id": "0311123", 
+            "pge": {
+                "code": "1234", 
+                "full": "Theory of Computing", 
+                "name": "THEORY OF COMPUTING"
+            }, 
+            "title": "Title", 
+            "abstract": "DNA abstract abstract abstract", 
+            "request": {
+                "duration": "36", 
+                "date": "2003/01/01", 
+                "dollar": "123345"
+            }, 
+            "awarded": {
+                "date": "2001/01/01", 
+                "duration": "36", 
+                "dollar": 990000
+            }, 
+            "inst": {
+                "nsf_id": "4070785000", 
+                "name": "Henry M Jackson Fdn for Advmt of Military Medicine"
+            }, 
+            "org": {
+                "code": "01234456", 
+                "name": "CCF", 
+                "full": "Theory of Computing"
+            }
+        }
+    ]
+}
+</pre>

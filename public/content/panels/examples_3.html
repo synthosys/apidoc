@@ -1,0 +1,59 @@
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api/panel?rid=HS0817152">http://128.150.10.70/py/api/panel?rid=HS0817152</a>
+</div>
+<p>To find panel information related to a specific reviewer (revr), first identify that you are looking for a “panel” in the [[object]] field and limit it by its reviewer id (rid=HS0817152) in the [[params]] field. </p>
+<p>The output shows the all the panels the reviewer is associated with. It includes unique identifiers/codes, organization affiliations, and affiliated reviewers (revr) for each panel.</p>
+<pre>
+{
+    "count": 6, 
+    "data": [
+        {
+            "nsf_id": "C123456", 
+            "pge": {
+                "code": "9999"
+            }, 
+            "name": "CMMI - Committee of Visitors", 
+            "prop": [
+                "0999999",, 
+                "0999999",, 
+                "0999999",, 
+                "0999999",, 
+                "0999999",, 
+                "0999999",, 
+{truncated}
+                "0999999",, 
+                "0999999",, 
+            ], 
+            "officer": "OFFICER", 
+            "address": {
+                "city": "Arlington", 
+                "state": "VA", 
+                "name": "Room 555"
+            }, 
+            "org": {
+                "code": "07099990", 
+                "name": "CMMI", 
+                "full": "Division of Civil, Mechanical, and Manufacturing Innovation"
+            }, 
+            "revr": [
+                "DB0895123", 
+                "DB0895123", 
+                "DB0895123", 
+                "DB0895123", 
+                "DB0895123", 
+                "DB0895123", 
+                "DB0895123", 
+                "DB0895123", 
+                "DB0895123", 
+                "DB0895123", 
+                "DB0895123", 
+                "DB0895123", 
+                "DB0895123", 
+                "DB0895123", 
+                "DB0895123", 
+                "DB0895123", 
+            ], 
+            "start_date": "2012/01/01"
+        }, 
+{truncated}
+</pre>

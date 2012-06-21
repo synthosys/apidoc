@@ -1,0 +1,29 @@
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api/user?id=269725860&page=pi" target="_blank">http://128.150.10.70/py/api/user?id=269725860&amp;page=pi</a>
+</div>
+<p>To find a list of the individual’s collaborators, known as “pi”, you add in “page=pi” in the [[params]] field. (You use “&amp;” to add additional parameters.) You use “page” because you are trying to find information specific to the individual user (by searching in his/her personal page). You set page=pi because pi refers to collaborators and co-authors. </p>
+<p>The output will show the number of collaborators the individual has worked with (“count”). (In this case, it is 1.) data shows the name, nsf_id and affiliation information (inst) for each collaborator.</p>
+<pre>
+{
+    "count": 3, 
+    "data": [
+        {
+            "count": 1, 
+            "nsf_id": "000123456", 
+            "inst": {
+                "nsf_id": "0014449000", 
+                "name": "George Washington University", 
+                "dept": "Computer Science"
+            }, 
+            "name": "John Smith"
+        }, 
+        {
+            "count": 1, 
+            "nsf_id": "269712345", 
+            "inst": {
+                "nsf_id": "4070785000", 
+                "name": "Henry M Jackson Fdn for Advmt of Military Medicine"
+            }, 
+            "name": "Jane Doe"
+        }, 
+</pre>

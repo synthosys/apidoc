@@ -1,0 +1,50 @@
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api.py/organization?id=0013706000&page=alias">http://128.150.10.70/py/api/organization?id=0013706000&amp;page=alias</a>
+</div>
+<p>Since organizations may sometimes have multiple unique NSF IDs, one tool to help look for possible duplicates is the alias command. You set page equal to alias in  [[params]] after identifying a particular organization id (in this example, it is 0013706000, University of Colorado at Denver).</p>
+<p>The output shows the number of possible duplicates (“count”) and gives identifying and contact information for each different nsf_id. Be careful with the list as some may have similar names but actually be unaffiliated. Also, it may not produce a complete list of possible duplicates as it is quite name-sensitive.</p>
+<pre>
+{
+    "count": 12, 
+    "data": [
+        {
+            "nsf_id": "0001271000", 
+            "name": "University of Colorado at Denver", 
+            "email": "user@ucdenver.edu", 
+            "phone": "5555555555", 
+            "flag": [
+                "duns_updt"
+            ], 
+            "address": {
+                "city": "Aurora", 
+                "zip": "800450508", 
+                "country": "US", 
+                "CD": "07", 
+                "state": "CO", 
+                "street": "15 Main St", 
+                "street_additional": "Rm 123"
+            }, 
+            "duns": "123456789", 
+            "class": "B06", 
+            "ein": "234567891"
+        }, 
+        {
+            "nsf_id": "0001289000", 
+            "name": "University of Colorado at Denver and Health Sciences Center", 
+            "email": "user2@ucdenver.edu", 
+            "phone": "5555555555", 
+            "address": {
+                "city": "Aurora", 
+                "zip": "800450508", 
+                "country": "US", 
+                "CD": "07", 
+                "state": "CO", 
+                "street": "ABC Bldg 500", 
+                "street_additional": "123 Main St, Rm 123"
+            }, 
+            "duns": "041096314", 
+            "class": "B06", 
+            "ein": "846000555"
+        }, 
+{truncated}
+</pre>

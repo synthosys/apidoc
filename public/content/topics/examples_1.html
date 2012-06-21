@@ -1,0 +1,83 @@
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api/topic?year=2010&t1=39,397,328" target="_blank">http://128.150.10.70/py/api/topic?year=2010&amp;t1=39,397,328</a>
+</div>
+<p>To find basic information on proposals with specific topics, first identify that you are looking for a “topic” in the [[object]] field. Limit the topic by [[params]] such as year (in this case, 2010) and topic numbers (in this example, we want only information about proposals with the most common topic, t1, of 39, 397 or 328). </p>
+<p>The output shows the number of proposals that match the parameter specifications (“count”, in this case it is 194). It shows unique identifiers/codes for the proposal, organization affiliations, and various status updates, including “code” which shows whether the proposal is an “award”. topic shows the most common topic id (the first match shows 39, 397, or 328) for each particular proposal.</p>
+<pre>
+{
+    "count": 94, 
+    "data": [
+        {
+            "status": {
+                "date": "2010/01/01", 
+                "code": "propose"
+            }, 
+            "pge": {
+                "code": "1234"
+            }, 
+            "request": {
+                "duration": "16", 
+                "date": "2011/01/01", 
+                "dollar": "50000"
+            }, 
+            "fiscal_year": "2010", 
+            "awarded": {
+                "duration": "0", 
+                "dollar": 0
+            }, 
+            "topic": {
+                "id": [
+                    "397", 
+                    "345", 
+                    "567", 
+                    "789"
+                ]
+            }, 
+            "org": {
+                "code": "07000000", 
+                "name": "NAM", 
+                "full": "Division of Industrial Innovation and Partnerships"
+            }, 
+            "proposal": {
+                "nsf_id": "1234567", 
+                "title": "Title"
+            }
+        }, 
+        {
+            "status": {
+                "date": "2010/01/01", 
+                "code": "decline"
+            }, 
+            "pge": {
+                "code": "9999"
+            }, 
+            "request": {
+                "duration": "60", 
+                "date": "2010/01/01", 
+                "dollar": "99999"
+            }, 
+            "fiscal_year": "2010", 
+            "awarded": {
+                "duration": "0", 
+                "dollar": 0
+            }, 
+            "topic": {
+                "id": [
+                    "123", 
+                    "345", 
+                    "397", 
+                    "789"
+                ]
+            }, 
+            "org": {
+                "code": "07000000", 
+                "name": "CBET", 
+                "full": "Environmental Remediation Program"
+            }, 
+            "proposal": {
+                "nsf_id": "0999994", 
+                "title": "Title"
+            }
+        },
+{truncated}
+</pre>

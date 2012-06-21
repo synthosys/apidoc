@@ -1,0 +1,41 @@
+<div class="subnav">
+	<ul class="nav nav-pills">
+		<% GLOBAL['resources'].each do |resource, params| %>
+			<% if params['examples'] then %>
+			<li<%= @resource == resource ? raw(' class="active"'): '' %>><%=link_to resource=='introduction'?'General':params['title'], examples_path(resource,1) %></li>
+			<% end %>
+		<% end %>
+	</ul>
+</div>
+<div class="row">
+	<div class="span9">
+		<div id="header" class="page-header">
+		  <h1>Examples</h1>
+		  <p class="lead">See the API in action! Browse the list of examples below.</p>
+		</div>
+		<div class="section">
+		<h2><%=@title%> <small><%=@subhead%></small></h2>
+		<div class="example">
+		<h3>Example <%=@example%> <small><%=@example_title%></small></h3>
+		<div class="alert"><strong>Feedback? Comments?</strong> Share your thoughts and join the discussion about this example. <span class="pull-right"><a href="#disqus_thread" data-disqus-identifier="<%=@disqus_identifier%>"></a></span></div>
+		<%=render :file=>"#{@content_path}/examples_#{@example}.html"%>
+		</div>
+		</div>
+		<div class="section">
+			<h2>Comments and Feedback <small>Share your thoughts on the API, ask questions, learn from others. Join the discussion below.</small></h2>
+			<div id="disqus_thread"></div>
+	        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	     </div>	
+ 	</div> <!-- span9 -->
+	<div class="span3">
+		<div class="well sidebarnav fixed-right examples">
+			<h3>Examples</h3>
+			<ol>
+				<% @examples.each_with_index do |example, index| %>
+				<li<%= @example == index+1 ? raw(' class="active"'): '' %>><%=link_to "#{example}", examples_path(@resource,index+1) %><small><a href="#disqus_thread" data-disqus-identifier="examples/<%=@resource%>/<%=(index+1)%>"></a></small></li>
+				<% end %>
+			</ol>
+		</div>
+ 	</div> <!-- span3 -->	
+</div>

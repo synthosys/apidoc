@@ -1,0 +1,81 @@
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api.py/topic?year=2010&t1=39,t2=397,t3=328">http://128.150.10.70/py/api/topic?year=2010&amp;t1=39,t2=397,t3=328</a>
+</div>
+<p>This query differs from the previous in that each topic is matched with a topic id number. Since they are separated by commas, it means “or” (one of the conditions must be true, either t1=39, t2=397, or t3=328).</p>
+<pre>
+{
+    "count": 99, 
+    "data": [
+        {
+            "status": {
+                "date": "2009/01/01", 
+                "code": "decline"
+            }, 
+            "pge": {
+                "code": "9999"
+            }, 
+            "request": {
+                "duration": "16", 
+                "date": "2009/01/01", 
+                "dollar": "253123"
+            }, 
+            "fiscal_year": "2010", 
+            "awarded": {
+                "duration": "0", 
+                "dollar": 0
+            }, 
+            "topic": {
+                "id": [
+                    "39", 
+                    "999", 
+                    "876"
+                ]
+            }, 
+            "org": {
+                "code": "09000000", 
+                "name": "CMMI", 
+                "full": "Division of Civil, Mechanical, and Manufacturing Innovation"
+
+            "proposal": {
+                "nsf_id": "0123455", 
+                "title": "Title"
+            }
+        }, 
+        {
+            "status": {
+                "date": "2010/01/01", 
+                "code": "decline"
+            }, 
+            "pge": {
+                "code": "9999"
+            }, 
+            "request": {
+                "duration": "36", 
+                "date": "2010/01/01", 
+                "dollar": "990000"
+            }, 
+            "fiscal_year": "2010", 
+            "awarded": {
+                "duration": "0", 
+                "dollar": 0
+            }, 
+            "topic": {
+                "id": [
+                    "39", 
+                    "123", 
+                    "234", 
+                    "457"
+                ]
+            }, 
+            "org": {
+                "code": "07000000", 
+                "name": "ECCS", 
+                "full": "Electronics, Photonics, &amp; Device Technologies"
+            }, 
+            "proposal": {
+                "nsf_id": "10012345", 
+                "title": "Title"
+            }
+        }, 
+{truncated}
+</pre>

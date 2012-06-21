@@ -1,0 +1,50 @@
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://rd-dashboard.nitrd.gov/gapi/api.py/user?id=000158971&page=patent" target="_blank">http://rd-dashboard.nitrd.gov/gapi/api.py/user?id=000158971&amp;page=patent</a>
+</div>
+<p>To find patent information by user, set “page=patent” in [[params]]. For user 000158971, he has 7 patents. The output details the patent’s information, including title, abstract, and grant_year.</p>
+<pre>
+{
+    "count": 7, 
+    "data": [
+        {
+            "title": "Title", 
+            "patent": "1234567", 
+            "abstract": "Abstract", 
+            "grant_year": 2005, 
+            "assignee": "NEUROGEN CORPORATION", 
+            "application_year": "2003", 
+            "classes": [
+                "548", 
+                "514", 
+                "568"
+            ], 
+            "inventors": [
+                {
+                    "name": "JENNIFER SMITH", 
+                    "patent_id": "06112345-1"
+                }, 
+                {
+                    "name": "JACKSON HUTCHISON", 
+                    "patent_id": "01234567-4"
+                }, 
+                {
+                    "nsf_id": "000123456", 
+                    "name": "JOHN C SMITH", 
+                    "patent_id": "06859999-2"
+                }, 
+                {
+                    "name": "ANDREW DOE", 
+                    "patent_id": "050000000-6"
+                }, 
+                {
+                    "name": "GEORGE YOON", 
+                    "patent_id": "05999999-3"
+                }, 
+                {
+                    "name": "ALEX LIN", 
+                    "patent_id": "06234567-3"
+                }
+            ]
+        }, 
+{truncated}
+</pre>

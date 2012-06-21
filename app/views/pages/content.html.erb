@@ -1,0 +1,72 @@
+<div class="row">
+	<div class="span9">
+		<div id="header" class="page-header">
+		    <h1><%=@title%></h1>
+			<p class="lead"><%=@subhead%></p>
+		</div>
+		<% if @overview then %>
+		<div class="section" id="overview">
+		<h2><%=@overview['title']?@overview['title']:'Overview'%> <small><%=@overview['subhead']%></small></h2>
+		<div>
+		<%=render :file=>"#{@content_path}/overview.html"%>
+		</div>
+		</div>
+		<% end %>
+		<% if @request then %>
+		<div class="section" id="request">
+		<h2><%=@request['title']?@request['title']:'Request'%> <small><%=@request['subhead']?@request['title']:'Search for user information using the GET Method.'%></small></h2>
+		<div>
+		<%=render :file=>"#{@content_path}/request.html"%>
+		</div>
+		</div>
+		<% end %>
+		<% if @result then %>
+		<div class="section" id="result">
+		<h2><%=@result['title']?@result['title']:'Result'%> <small><%=@result['subhead']?@result['title']:'Properties (meta data)'%></small></h2>
+		<div>
+		<%=render :file=>"#{@content_path}/result.html"%>
+		</div>
+		</div>
+		<% end %>
+		<% if @connections then %>
+		<div class="section" id="connections">
+		<h2><%=@connections['title']?@connections['title']:'Connections'%> <small><%=@connections['subhead']?@connections['title']:'(linkages)'%></small></h2>
+		<div>
+		<%=render :file=>"#{@content_path}/connections.html"%>
+		</div>
+		</div>
+		<% end %>
+		<div class="section">
+			<h2>Comments and Feedback <small>Share your thoughts on the API, ask questions, learn from others. Join the discussion below.</small></h2>
+			<div id="disqus_thread"></div>
+	        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	     </div>	
+ 	</div> <!-- span9 -->
+	<div class="span3">
+		<div class="well sidebarnav fixed-right scrollspy">
+			<ul class="nav nav-list">
+				<li class="nav-header">Jump To:</li>
+			   	<% if @overview then %><li><a href="#overview"><i class="icon-search"></i> Overview</a></li><% end %>
+			   	<% if @request then %><li><a href="#request"><i class="icon-cog"></i> Request</a></li><% end %>
+			   	<% if @result then %><li><a href="#result"><i class="icon-th-list"></i> Result</a></li><% end %>
+			   	<% if @connections then %><li><a href="#connections"><i class="icon-resize-horizontal"></i> Connections</a></li><% end %>
+				<li class="divider"></li>
+				<li><h4>Comments? Feedback?</h4><p>Tell us what you think.</p> <a href="#disqus_thread" data-disqus-identifier="<%=@disqus_identifier%>"></a></li>
+			</ul>
+			<% if (@examples) then %>
+			<hr />
+			<div class="examples">
+			<h4>Examples</h4>
+			<ol>
+				<% @examples.each_with_index do |example, index| %>
+				<li><%=link_to "#{example}", examples_path(@resource,index+1) %><small><a href="#disqus_thread" data-disqus-identifier="examples/<%=@resource%>/<%=(index+1)%>"></a></small></li>
+				<% end %>
+			</ol>
+			<% end %>
+		</div>		
+	</div> <!-- span3 -->
+</div>
+
+<script type="text/javascript">
+</script>

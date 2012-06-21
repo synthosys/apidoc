@@ -1,0 +1,51 @@
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api.py/organization?&id=0290452000&page=pi">http://128.150.10.70/py/api/organization?&amp;id=0290452000&amp;page=pi</a>
+</div>
+<p>To find a list of the organization’s collaborators, known as “pi”, you add in “page=pi” in the [[params]] field. You use “page” because you are trying to find information specific to the organization. You set page=pi because pi refers to collaborators and co-authors. </p>
+<p>The output will first show the number of sets of collaborators the organization has had (noted by “count,” in this case it is 48). For each individual, noted by “name” and “nsf_id”, “data” shows his/her institutional information “inst” and the number of proposals s/he has worked on for the organization. (For Johannes G Thewissen, he was involved in 7 proposals.) These proposals are listed by their “prop” identifier.</p>
+<pre>
+{
+    "count": 48, 
+    "data": [
+        {
+            "count": 7, 
+            "nsf_id": "000123456", 
+            "name": "Jerry L Finkel", 
+            "prop": [
+                "9123456", 
+                "9912345", 
+                "9123459", 
+                "9123458", 
+                "9123457", 
+                "9123455", 
+                "9123454"
+            ], 
+            "inst": {
+                "nsf_id": "0123456789", 
+                "name": "Northeastern Ohio University College of Medicine", 
+                "dept": "Dept"
+            }, 
+            "address": {
+                "state": "OH"
+            }
+        }, 
+        {
+            "count": 3, 
+            "nsf_id": "000031234", 
+            "name": "John J Lee", 
+            "prop": [
+                "9876599", 
+                "9876598", 
+                "9876597"
+            ], 
+            "inst": {
+                "nsf_id": "0290452000", 
+                "name": "Name", 
+                "dept": "Microbiology/Immunology"
+            }, 
+            "address": {
+                "state": "OH"
+            }
+        },
+{truncated}
+</pre>

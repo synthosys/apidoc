@@ -1,0 +1,42 @@
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api.py/topic?topic?org=CMMI,1189&year=2009-2011&status=award&page=grant%20">http://128.150.10.70/py/api/topic?topic?org=CMMI,1189&amp;year=2009-2011&amp;status=award&amp;page=grant</a>
+</div>
+<p>Using page=grant [[params]], you can find grant information. In this case, the query is restricted to awards (”status=award”) within the CMMI division and pge code 1198 (“org=CMMI,1189”) from fiscal years 2009-2011 (“year”). 58 such grants fit this criteria. Grant details including status, topic id, and proposal information are shown.</p>
+<pre>
+{
+    "count": 99, 
+    "data": [
+        {
+            "status": {
+                "date": "2009/01/01", 
+                "code": "award"
+            }, 
+            "pge": {
+                "code": "1189"
+            }, 
+            "fiscal_year": "2009", 
+            "awarded": {
+                "duration": "36", 
+                "date": "2009/08/01", 
+                "dollar": 999999
+            }, 
+            "topic": {
+                "id": [
+                    "183", 
+                    "719", 
+                    "359", 
+                    "937"
+                ]
+            }, 
+            "org": {
+                "code": "07030000", 
+                "name": "CMMI", 
+                "full": "Division of Civil, Mechanical, and Manufacturing Innovation"
+            }, 
+            "proposal": {
+                "nsf_id": "0912345", 
+                "title": "MRI: Acquisition"
+            }
+        }, 
+{truncated}
+</pre>

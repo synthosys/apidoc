@@ -1,0 +1,42 @@
+<div class="tryit alert alert-success">
+<span class="label label-success">Try It!</span> <a href="http://128.150.10.70/py/api/user?id=269725860" target="_blank">http://128.150.10.70/py/api/user?id=269725860</a>
+</div>
+<p>To find basic information on an unique user, identify that you are looking for an “user” in the [[object]] field and limit it by its id (id=269725860) in the [[params]] field. </p>
+<p>The output will show the user id, full name, affiliated institution, contact information, and personal biographical information.</p>
+<pre>
+{
+    "count": 1, 
+    "data": [
+        {
+            "nsf_id": "269725860", 
+            "first_name": "John", 
+            "last_name": "Smith", 
+            "name": "John Smith", 
+            "degree": {
+                "name": "PhD", 
+                "year": "1999"
+            }, 
+            "gender": "M", 
+            "phone": "5555555555", 
+            "inst": {
+                "dept": "Preventive Medicine", 
+                "state": "MD", 
+                "name": "School of Medicine", 
+                "nsf_id": "4070785000"
+            }, 
+            "address": {
+                "country": "US", 
+                "state": "MD", 
+                "street": "1234 Main St ", 
+                "zip": "20814", 
+                "city": "Bethesda"
+            }, 
+            "pi": [
+                "123456789"
+            ], 
+            "email": "jsmith@school.edu", 
+            "ethnicity": "NH"
+        }
+    ]
+}
+</pre>

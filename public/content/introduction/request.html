@@ -1,0 +1,150 @@
+<div class="alert">You need to log into Access NSF or Access Workspace in order to pull API queries.</div>
+<p>The link is in the form of: <b>http://128.150.10.70/py/api/</b><b>[[object]]</b><b>?</b><b>[[params]]</b></p>
+<p>To limit the parameters, you use “=” after the specific parameter followed by the search term.</p>
+<p>Proposal information is retrieved using the GET Method.</p>
+<p>Operators allowable in general request formula (*note: “year” [[params]] has extra operators, explained below):</p>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Role</th>
+      <th>Example in [[params]]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>=</td>
+      <td>equal sign</td>
+      <td><p>define or limit a parameter</td>
+      <td>id=269662605</td>
+    </tr>
+    <tr>
+      <td>&amp;</td>
+      <td>add</td>
+      <td>link multiple parameters</td>
+      <td>id=000158971&amp;page=patent</td>
+    </tr>
+    <tr>
+      <td>,</td>
+      <td>comma</td>
+      <td>add terms within a parameter, acts as “or”</td>
+      <td>t1=39,397,328</td>
+    </tr>
+  </tbody>
+</table>
+<h3>[[object]]</h3>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>user</td>
+      <td>The individual object is known as the user. These are the grant submitters. </td>
+    </tr>
+    <tr>
+      <td>organization</td>
+      <td>The user's academic organization. Can also be written as org.</td>
+    </tr>
+    <tr>
+      <td>proposal</td>
+      <td>The user's submitted NSF proposal.</td>
+    </tr>
+    <tr>
+      <td>panel</td>
+      <td>A panel is a group of reviewers.</td>
+    </tr>
+    <tr>
+      <td>topic</td>
+      <td>Topic model keywords. They are compiled based on collected data.</td>
+    </tr>
+    <tr>
+      <td>patent</td>
+      <td>Patent data. (Up to date to 2010 only. Currently, no real patent data exists, please see Lee Fleming’s work: <a href="http://readidata.nitrd.gov/star/about_patents.php">http://readidata.nitrd.gov/star/about_patents.php</a>)</td>
+    </tr>
+</tbody>
+</table>
+<h3>[[params]]</h3>
+<table class="table table-bordered">
+    <tr>
+      <td><b>Name</b></td>
+      <td><b>Description</b></td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>User or topic object's unique id. </td>
+    </tr>
+    <tr>
+      <td>rid</td>
+      <td>Reviewer id. </td>
+    </tr>
+    <tr>
+      <td>pid</td>
+      <td>Panel id.</td>
+    </tr>
+    <tr>
+      <td>year</td>
+      <td>Associated year. Possible operations are &gt;, &lt;, - (“between”, i.e. 2001-2011), &gt;=, &lt;=, and =.Default uses award year. To specify request year, insert "R" before the parameter value.</td>
+    </tr>
+    <tr>
+      <td>page</td>
+      <td>An individual page. May use objects (with “=”) such as org (organization), prop (proposals), pi (also known as co-pi’s, or collaborators), patent (patents), grant (grants), search (often used with “q”, see below) and alias (possible double matches based on [[object]] name) to find connections.</td>
+    </tr>
+    <tr>
+      <td>q</td>
+      <td>A basic search option yields up to 25 results. Used with page=search. Note: it looks for the search term only and ignores the id. (See Harvard example below.)</td>
+    </tr>
+    <tr>
+      <td>summ=[options] (or summ)</td>
+      <td>
+        <p>A summary of the user's files. summ (by itself) assumes that it is possible to summarize by the fields provided. For example, /topics?year=2000-2008&amp;t1=10&amp;summ will not show t1 or year details. It is mostly likely summarized on proposal, the most granular level. </p>
+        <p>summ can set by status, year, topic (i.e. t1), org (division) and/or pge (multiples separated by “,”).</p>
+      </td>
+    </tr>
+    <tr>
+      <td>status</td>
+      <td>The type of proposal data. You can choose between award, decline, or propose. If not specified, the default shows all options together.</td>
+    </tr>
+    <tr>
+      <td>format</td>
+      <td>To download data in CSV format, add “format=csv” to the end of the query. </td>
+    </tr>
+    <tr>
+      <td>legend</td>
+      <td>Every page has a legend (list of labels). legend (by itself) gives only the labels. When you set legend=[label], you get a list of all the different [label]s. </td>
+    </tr>
+    <tr>
+      <td>count</td>
+      <td>Used in conjunction with other [[params]]. (Be sure to use “&amp;”.) Shows how many instances the [[object]] occurs confined by those [[params]].</td>
+    </tr>
+    <tr>
+      <td colspan="2" valign="bottom">
+        <p><br></p>
+        <p>[[params]] only valid with topic [[object]]</p>
+      </td>
+    </tr>
+    <tr>
+      <td>t, t1, t2, t3, t4</td>
+      <td>The topics that describe a proposal. They are proposal specific, i.e. t1 refers to the most common topic, t4 refers to the least common topic (since there is a max of 4 topics). t refers to any topic. To use more than one topic in a query, you use “t” and then the topic number without spaces after, i.e. for topics 1 and 3, it would be written as: t13</td>
+    </tr>
+    <tr>
+      <td>org</td>
+      <td>NSF divisions or program element code (pge). List with division codes at: <a href="http://www.nsf.gov/staff/orglist.jsp">http://www.nsf.gov/staff/orglist.jsp</a> and also listed in the NSF organization list below. </td>
+    </tr>
+  </tbody>
+</table>
+<h3>Notes</h3>
+<ul>
+  <li>In terms of granularity: prop &gt; pi &gt; org</li>
+  <li>Can search multiple parameters using "&amp;" and multiple terms within the parameters using ","</li>
+  <li>If query exceeds 1000 observations, error will appear</li>
+  <li>If you choose CSV format, be aware that excel will drop any “0” in front of a number. This means for proposal ids that begin with “0,” they may need to be converted back to their original form before they can be used.</li>
+  <li>Also, CSV format separates multiple topic ids with pipes in the same column instead of dividing them into separate columns</li>
+  <li>By default, entries with blank values will not be displayed;  those fields disappear.</li>
+</ul>
+<p> </p>
+<p><b>*Please note: some outputs in this documentation show fake data to protect privacy! </b></p>
