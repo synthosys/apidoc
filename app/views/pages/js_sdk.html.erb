@@ -1,10 +1,16 @@
+<div class="subnav">
+	<ul class="nav nav-pills">
+		<li<%= @type == 'js' ? raw(' class="active"'): '' %>><%=link_to 'JavaScript', sdk_path('js') %></li>
+		<li<%= @type == 'python' ? raw(' class="active"'): '' %>><%=link_to 'Python', sdk_path('python') %></li>
+	</ul>
+</div>
 <div id="header" class="page-header">
     <h2>JavaScript SDK</h1>
 	<p class="lead">A software development kit to include in your JavaScript projects.</p>
 </div>
 <div class="section">
 <h2>How To Use</h2>
-<p><a href="js/libs/sm.js" target="_blank">Download the script file</a> and place it in your project directory.</p>
+<p><a href="/downloads/sm.js" target="_blank">Download the script file</a> and place it in your project directory.</p>
 <p>Include it in your project as follows:</p>
 <code>&lt;script src="pathtofile/sm.js" type="text/javascript" /&gt;</code>
 </div>

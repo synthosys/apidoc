@@ -11,6 +11,7 @@ Apidoc::Application.routes.draw do
 
   match 'content/:resource' => 'pages#content', :as => 'content'
   match 'examples/:resource/:example' => 'pages#examples', :as => 'examples'
+  match 'sdk/:type' => 'pages#sdk', :as => 'sdk'
   
   root :to => 'pages#content'
   

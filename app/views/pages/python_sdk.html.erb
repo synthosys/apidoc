@@ -1,0 +1,670 @@
+<div class="subnav">
+	<ul class="nav nav-pills">
+		<li<%= @type == 'js' ? raw(' class="active"'): '' %>><%=link_to 'JavaScript', sdk_path('js') %></li>
+		<li<%= @type == 'python' ? raw(' class="active"'): '' %>><%=link_to 'Python', sdk_path('python') %></li>
+	</ul>
+</div>
+<div class="row">
+	<div class="span9">
+		<div id="header" class="page-header">
+		    <h2>Python SDK</h1>
+			<p class="lead">A software development kit to include in your python projects.</p>
+		</div>
+		<div class="section">
+		<h2>How To Use</h2>
+		<p><a href="/downloads/sm.py" target="_blank">Download the module file</a> and place it in your project directory.</p>
+		<p>Include it in your project as follows:</p>
+		<code>import sm</code>
+		</div>
+		<div class="section" id="topics">
+			<h2>List of Topics</h2>
+			<h3>Call</h3>
+			<pre>sm.topics({"org":"CMMI","year":"2007-2009"})</pre>
+			<h3>Result</h3>
+			<pre>
+[
+ --snipped--				
+ {
+  "t": "551",
+  "label": "Geophysics",
+  "words": "seismic earthquake NEE structure frame damage structural earthquake_engineering ground_motion shake_table collapse performance_based force floor drift displacement nonlinear structural_system steel hybrid_simulation ...",
+  "t1": {
+   "t": "551",
+   "count": {
+    "award": 67,
+    "decline": 0,
+    "other": 0
+   },
+   "funding": {
+    "award": 175586801,
+    "request": 0
+   },
+   "years": {
+    "2009": {
+     "count": {
+      "award": 26,
+      "decline": 0,
+      "other": 0
+     },
+     "funding": {
+      "award": 153846808,
+      "request": 0
+     }
+    },
+    "2007": {
+     "count": {
+      "award": 23,
+      "decline": 0,
+      "other": 0
+     },
+     "funding": {
+      "award": 11906033,
+      "request": 0
+     }
+    },
+    "2008": {
+     "count": {
+      "award": 18,
+      "decline": 0,
+      "other": 0
+     },
+     "funding": {
+      "award": 9833960,
+      "request": 0
+     }
+    }
+   }
+  },
+  "t2": {
+   "t": "551",
+   "count": {
+    "award": 29,
+    "decline": 0,
+    "other": 0
+   },
+   "funding": {
+    "award": 10384992,
+    "request": 0
+   },
+   "years": {
+    "2009": {
+     "count": {
+      "award": 14,
+      "decline": 0,
+      "other": 0
+     },
+     "funding": {
+      "award": 6303444,
+      "request": 0
+     }
+    },
+    "2008": {
+     "count": {
+      "award": 10,
+      "decline": 0,
+      "other": 0
+     },
+     "funding": {
+      "award": 3441540,
+      "request": 0
+     }
+    },
+    "2007": {
+     "count": {
+      "award": 5,
+      "decline": 0,
+      "other": 0
+     },
+     "funding": {
+      "award": 640008,
+      "request": 0
+     }
+    }
+   }
+  },
+  "t3": {
+   "t": "551",
+   "count": {
+    "award": 19,
+    "decline": 0,
+    "other": 0
+   },
+   "funding": {
+    "award": 3730007,
+    "request": 0
+   },
+   "years": {
+    "2009": {
+     "count": {
+      "award": 6,
+      "decline": 0,
+      "other": 0
+     },
+     "funding": {
+      "award": 908205,
+      "request": 0
+     }
+    },
+    "2008": {
+     "count": {
+      "award": 5,
+      "decline": 0,
+      "other": 0
+     },
+     "funding": {
+      "award": 673110,
+      "request": 0
+     }
+    },
+    "2007": {
+     "count": {
+      "award": 8,
+      "decline": 0,
+      "other": 0
+     },
+     "funding": {
+      "award": 2148692,
+      "request": 0
+     }
+    }
+   }
+  },
+  "t4": {
+   "t": "551",
+   "count": {
+    "award": 9,
+    "decline": 0,
+    "other": 0
+   },
+   "funding": {
+    "award": 2106125,
+    "request": 0
+   },
+   "years": {
+    "2009": {
+     "count": {
+      "award": 3,
+      "decline": 0,
+      "other": 0
+     },
+     "funding": {
+      "award": 1228284,
+      "request": 0
+     }
+    },
+    "2008": {
+     "count": {
+      "award": 4,
+      "decline": 0,
+      "other": 0
+     },
+     "funding": {
+      "award": 794636,
+      "request": 0
+     }
+    },
+    "2007": {
+     "count": {
+      "award": 2,
+      "decline": 0,
+      "other": 0
+     },
+     "funding": {
+      "award": 83205,
+      "request": 0
+     }
+    }
+   }
+  }
+ }
+ --snipped--
+]
+			</pre>
+		</div>
+		<div class="section" id="programs">
+			<h2>List of Programs</h2>
+			<h3>Call</h3>
+			<pre>sm.programs({"org":"CMMI","year":"2007-2009"})</pre>
+			<h3>Result</h3>
+			<pre>
+[
+ --snipped--
+ {
+  "pge": "1467",
+  "label": "MATERIALS PROCESSING AND MANFG",
+  "count": {
+   "award": 134,
+   "decline": 0,
+   "other": 0
+  },
+  "funding": {
+   "award": 35212772,
+   "request": 0
+  },
+  "years": {
+   "2009": {
+    "count": {
+     "award": 49,
+     "decline": 0,
+     "other": 0
+    },
+    "funding": {
+     "award": 13019312,
+     "request": 0
+    }
+   },
+   "2007": {
+    "count": {
+     "award": 47,
+     "decline": 0,
+     "other": 0
+    },
+    "funding": {
+     "award": 11933042,
+     "request": 0
+    }
+   },
+   "2008": {
+    "count": {
+     "award": 38,
+     "decline": 0,
+     "other": 0
+    },
+    "funding": {
+     "award": 10260418,
+     "request": 0
+    }
+   }
+  }
+ }
+ --snipped--
+]
+			</pre>
+		</div>
+		<div class="section" id="divisions">
+			<h2>List of Divisions</h2>
+			<h3>Call</h3>
+			<pre>sm.divisions({"t":"551","year":"2007-2009"})</pre>
+			<h3>Result</h3>
+			<pre>
+[
+ --snipped--
+ {
+  "org": "CMMI",
+  "count": {
+   "award": 124,
+   "decline": 0,
+   "other": 0
+  },
+  "funding": {
+   "award": 191807925,
+   "request": 0
+  },
+  "years": {
+   "2009": {
+    "count": {
+     "award": 49,
+     "decline": 0,
+     "other": 0
+    },
+    "funding": {
+     "award": 162286741,
+     "request": 0
+    }
+   },
+   "2007": {
+    "count": {
+     "award": 38,
+     "decline": 0,
+     "other": 0
+    },
+    "funding": {
+     "award": 14777938,
+     "request": 0
+    }
+   },
+   "2008": {
+    "count": {
+     "award": 37,
+     "decline": 0,
+     "other": 0
+    },
+    "funding": {
+     "award": 14743246,
+     "request": 0
+    }
+   }
+  },
+  "label": "Division of Civil, Mechanical & Manufacturing Innovation"
+ }
+ --snipped--
+]
+			</pre>
+		</div>
+		<div class="section" id="proposals">
+			<h2>List of Proposals</h2>
+			<h3>Call</h3>
+			<pre>sm.proposals({"org":"CMMI","year":"2007-2009"})</pre>
+			<h3>Result</h3>
+			<pre>
+{
+ "count": 1807,
+ "data": [
+  {
+   "status": {
+    "date": "2007/07/12",
+    "code": "award"
+   },
+   "pge": {
+    "code": "1467"
+   },
+   "fiscal_year": "2007",
+   "awarded": {
+    "duration": "36",
+    "date": "2007/07/15",
+    "dollar": 333134
+   },
+   "topic": {
+    "id": [
+     "643",
+     "699",
+     "363",
+     "869"
+    ]
+   },
+   "org": {
+    "code": "07030004",
+    "name": "CMMI",
+    "full": "Manufacturing Processes & Equipment Program"
+   },
+   "proposal": {
+    "nsf_id": "0654326",
+    "title": "Theoretical and Experimental Studies of Novel Process for Compounding of Carbon Nanotubes and Nanofibers in Polymer Melts"
+   }
+  },
+  --snipped--
+  ]
+}
+			</pre>
+		</div>
+		<div class="section" id="institutions">
+			<h2>List of Institutions</h2>
+			<h3>Call</h3>
+			<pre>sm.institutions({"org":"CMMI","year":"2007-2009"})</pre>
+			<h3>Result</h3>
+			<pre>
+{
+ "count": 238,
+ "data": [
+  {
+   "count": 74,
+   "nsf_id": "0017756000",
+   "name": "University of Illinois at Urbana-Champaign",
+   "prop": [
+    "0710777",
+    "0732253",
+    "0751406",
+    "0833070",
+    "0834098",
+    "0906361",
+    "0907754",
+    "0914917",
+    "0917777",
+    "0952565",
+    "0956362",
+    "0958198",
+    "0653909",
+    "0700045",
+    "0725408",
+    "0725444",
+    "0728246",
+    "0729500",
+    "0742538",
+    "0748067",
+    "0826469",
+    "0830364",
+    "0825677",
+    "0846449",
+    "0856555",
+    "0900226",
+    "0900542",
+    "0855787",
+    "0856322",
+    "0927909",
+    "0726878",
+    "0927051",
+    "0926845",
+    "0927367",
+    "0727620",
+    "0758569",
+    "0846624",
+    "0728189",
+    "0748120",
+    "0926813",
+    "0846771",
+    "0654374",
+    "0700415",
+    "0700704",
+    "0709023",
+    "0723697",
+    "0724172",
+    "0726742",
+    "0726934",
+    "0727083",
+    "0749028",
+    "0758310",
+    "0800208",
+    "0800500",
+    "0800805",
+    "0800863",
+    "0800870",
+    "0803692",
+    "0825173",
+    "0825220",
+    "0825654",
+    "0825961",
+    "0856172",
+    "0900138",
+    "0900184",
+    "0900196",
+    "0923428",
+    "0927149",
+    "0927995",
+    "0928886",
+    "0936464",
+    "0937771",
+    "0947184",
+    "0948905"
+   ],
+   "address": {
+    "state": "IL"
+   },
+   "awarded_dollar": 39552592
+  },
+  --snipped--
+  ]
+}
+			</pre>
+		</div>
+		<div class="section" id="researchers">
+			<h2>List of Researchers</h2>
+			<h3>Call</h3>
+			<pre>sm.researchers({"org":"CMMI","year":"2007-2009"})</pre>
+			<h3>Result</h3>
+			<pre>
+{
+ "count": 2408,
+ "data": [
+  {
+   "count": 1,
+   "nsf_id": "000000084",
+   "name": "Derek Dunn-Rankin",
+   "prop": [
+    "0727609"
+   ],
+   "inst": {
+    "nsf_id": "0013144000",
+    "name": "University of California-Irvine",
+    "dept": "Mechanical and Aerospace Engineering"
+   },
+   "address": {
+    "state": "CA"
+   }
+  },
+  {
+   "count": 1,
+   "nsf_id": "000001384",
+   "name": "Laurence J Jacobs",
+   "prop": [
+    "0653883"
+   ],
+   "inst": {
+    "nsf_id": "0015693000",
+    "name": "Georgia Tech Research Corporation",
+    "dept": "College of Engineering"
+   },
+   "address": {
+    "state": "GA"
+   }
+  },
+  --snipped--
+]
+			</pre>
+		</div>
+		<div class="section" id="proposal">
+			<h2>Proposal Details</h2>
+			<h3>Call</h3>
+			<pre>sm.proposal('1126899')</pre>
+			<h3>Result</h3>
+			<pre>
+{
+ "count": 1,
+ "data": [
+  {
+   "status": {
+    "date": "2011/08/18",
+    "name": "award"
+   },
+   "nsf_id": "1126899",
+   "pge": {
+    "code": "1189",
+    "full": "Major Research Instrumentation",
+    "name": "MAJOR RESEARCH INSTRUMENTATION"
+   },
+   "title": "MRI: Acquisition of a DSC (Differential Scanning Calorimetry) System for R&D at CESUR (Center for Efficient and Sustainable Use of Resources) of Arkansas State University",
+   "abstract": "The research objective of this Major Research Instrumentation (MRI) award is to acquire a DSC (Differential Scanning Calorimetry) system to measure the temperature and heat flow corresponding to the thermal performance of materials, both as a function of time and temperature. The DSC instrument provides qualitative and quantitative information on endothermic/heat absorbing (e.g. melting) and exothermic/heat releasing (e.g. solidification of fusion) processes of materials. The DSC system will be shared and utilized under interdisciplinary collaboration by eight faculty members' multiple research groups. Some of the key research that will be supported by this equipment includes: 1) experimental study of advanced heat transfer fluids for renewable/nuclear/fossil power plant applications and computational study of thermodynamic modeling to predict phase transition behaviors of novel multicomponent mixtures; 2) study of characterization of TICPET (Thermally Induced Condensed Phase Electron Transfer) and metal h",
+   "awarded": {
+    "date": "2011/09/01",
+    "duration": "24",
+    "dollar": 138288
+   },
+   "inst": {
+    "nsf_id": "0010900000",
+    "name": "Arkansas State University Main Campus"
+   },
+   "org": {
+    "code": "07030000",
+    "name": "CMMI",
+    "full": "Division of Civil, Mechanical, and Manufacturing Innovation"
+   }
+  }
+ ]
+}
+			</pre>
+		</div>
+		<div class="section" id="institution">
+			<h2>Institution Details</h2>
+			<h3>Call</h3>
+			<pre>sm.institution('0038950000')</pre>
+			<h3>Result</h3>
+			<pre>
+{
+ "count": 1,
+ "data": [
+  {
+   "nsf_id": "0038950000",
+   "name": "University of Wisconsin-Madison",
+   "email": "nsf@rsp.wisc.edu",
+   "phone": "6082623822",
+   "flag": [
+    "duns_updt"
+   ],
+   "address": {
+    "city": "MADISON",
+    "zip": "537151218",
+    "country": "US",
+    "CD": "02",
+    "state": "WI",
+    "street": "21 North Park Street",
+    "street_additional": "Suite 6401"
+   },
+   "duns": "161202122",
+   "class": "B06",
+   "ein": "396006492"
+  }
+ ]
+}
+			</pre>
+		</div>
+		<div class="section" id="researcher">
+			<h2>Researcher Details</h2>
+			<h3>Call</h3>
+			<pre>sm.researcher('269729592')</pre>
+			<h3>Result</h3>
+			<pre>
+{
+ "count": 1,
+ "data": [
+  {
+   "nsf_id": "269729592",
+   "first_name": "Krishnan",
+   "last_name": "Suresh",
+   "name": "Krishnan Suresh",
+   "degree": {
+    "name": "PhD",
+    "year": "1998"
+   },
+   "gender": "M",
+   "phone": "6082623594",
+   "inst": {
+    "dept": "Mechanical Engineering",
+    "state": "WI",
+    "name": "University of Wisconsin-Madison",
+    "nsf_id": "0038950000"
+   },
+   "address": {
+    "country": "US",
+    "state": "WI",
+    "street": "1513 University Avenue",
+    "zip": "537061490",
+    "city": "Madison"
+   },
+   "pi": [
+    "269729592"
+   ],
+   "email": "suresh@engr.wisc.edu",
+   "ethnicity": "NH"
+  }
+ ]
+}
+			</pre>
+		</div>
+ 	</div> <!-- span9 -->
+	<div class="span3">
+		<div class="well sidebarnav fixed-right scrollspy">
+			<ul class="nav nav-list">
+				<li class="nav-header">SDK Calls:</li>
+				<li><a href="#topics">List of Topics</a></li>
+				<li><a href="#programs">List of Programs</a></li>
+				<li><a href="#divisions">List of Divisions</a></li>
+				<li><a href="#proposals">List of Proposals</a></li>
+				<li><a href="#institutions">List of Institutions</a></li>
+				<li><a href="#researchers">List of Researchers</a></li>
+				<li class="divider"></li>
+				<li><a href="#proposal">Proposal Details</a></li>
+				<li><a href="#institution">Institution Details</a></li>
+				<li><a href="#researcher">Researcher Details</a></li>
+			</ul>
+		</div>		
+	</div> <!-- span3 -->
+</div>

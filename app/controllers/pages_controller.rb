@@ -51,6 +51,8 @@ class PagesController < ApplicationController
   end
 
   def sdk
+    if params[:type].nil? then @type = 'js' else @type = params[:type] end
+    render :template => "pages/#{@type}_sdk"
   end
 
   def orglist
