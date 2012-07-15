@@ -19,12 +19,12 @@
 			//load topiclegends if not loaded
 			if (!accesschecked) {
 			    $.ajax({
-			      url: "http://128.150.10.70/py/api/access",
+			      url: "http://nsf.api.smetrics.org/v1/access",
 			      dataType: 'JSONP',
 			      timeout: 500
 				}).done(function(data){
 					proposalaccessallowed = true;
-					apiurl = "http://128.150.10.70/py/api/";
+					apiurl = "http://nsf.api.smetrics.org/v1/";
 					accesschecked = true;
 					d.resolve();
 				}).fail(function(data){
@@ -721,14 +721,14 @@
     if (typeof module !== 'undefined' && module.exports) {
       exports = module.exports = sm;
     }
-    exports.StarMetrics = sm;
+    exports.sm = sm;
   } else {
     if (typeof define === 'function' && define.amd) {
-      define('starmetrics', function() {
+      define('sm', function() {
         return sm;
       });
     }
-    root['StarMetrics'] = sm;
+    root['sm'] = sm;
   }
 
 }).call(this); //execute the function immediately

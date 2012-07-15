@@ -5,17 +5,17 @@
 	</ul>
 </div>
 <div id="header" class="page-header">
-    <h2>JavaScript SDK</h1>
+    <h2>JavaScript SDK (Alpha)</h1>
 	<p class="lead">A software development kit to include in your JavaScript projects.</p>
 </div>
 <div class="section">
 <h2>How To Use</h2>
-<p><a href="/downloads/sm.js" target="_blank">Download the script file</a> and place it in your project directory.</p>
+<p><a href="https://github.com/krishenn/sdk" target="_blank">Download the script file</a> and place it in your project directory.</p>
 <p>Include it in your project as follows:</p>
 <code>&lt;script src="pathtofile/sm.js" type="text/javascript" /&gt;</code>
 </div>
 <div class="section">
-<h2>StarMetrics JavaScript SDK Usage</h2>
+<h2>JavaScript SDK Usage</h2>
 <form class="well form-horizontal">
 	<div class="control-group">
 		<label class="control-label"><strong>Show:</strong></label>
@@ -55,34 +55,34 @@ LoadView = Backbone.View.extend({
 		var options;
 		if (resource=='topics') {
 			options = {org:'CMMI',year:'2007-2009'};
-			StarMetrics.topics(options,this.render);
+			sm.topics(options,this.render);
 		} else if (resource=='programs') {
 			options = {org:'CMMI',year:'2007-2009'};
-			StarMetrics.programs(options,this.render);						
+			sm.programs(options,this.render);						
 		} else if (resource=='divisions') {
 			options = {t:'551',year:'2007-2009'};
-			StarMetrics.divisions(options,this.render);
+			sm.divisions(options,this.render);
 		} else if (resource=='proposals') {
 			options = {org:'CMMI',year:'2007-2009'};
-			StarMetrics.proposals(options,this.render);						
+			sm.proposals(options,this.render);						
 		} else if (resource=='institutions') {
 			options = {org:'CMMI',year:'2007-2009'};
-			StarMetrics.institutions(options,this.render);						
+			sm.institutions(options,this.render);						
 		} else if (resource=='researchers') {
 			options = {org:'CMMI',year:'2007-2009'};
-			StarMetrics.researchers(options,this.render);						
+			sm.researchers(options,this.render);						
 		} else if (resource=='proposal') {
 			options = '1126899';
-			StarMetrics.proposal(options,this.render);						
+			sm.proposal(options,this.render);						
 		} else if (resource=='institution') {
 			options = '0038950000';
-			StarMetrics.institution(options,this.render);						
+			sm.institution(options,this.render);						
 		} else if (resource=='researcher') {
 			options = '269729592';
-			StarMetrics.researcher(options,this.render);
+			sm.researcher(options,this.render);
 		}
 		if (typeof(options)!=='string') options = JSON.stringify(options);
-		$('#call', this.el).html("StarMetrics."+resource+"("+options+",callback);");		
+		$('#call', this.el).html("sm."+resource+"("+options+",callback);");		
 	},
 	render: function(result) {
 		if (result) result = jsl.format.formatJson(JSON.stringify(result));

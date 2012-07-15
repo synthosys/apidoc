@@ -7,12 +7,12 @@ apiurl = 'http://rd-dashboard.nitrd.gov/star/api/'
 # Check to see if we have access to nsfstarmetrics server
 # This is done once when the module is loaded
 try:
-    urllib2.urlopen("http://128.150.10.70/py/api/access",None,2)
+    urllib2.urlopen("http://nsf.api.smetrics.org/v1/access",None,2)
 except urllib2.URLError:
     pass
 else:
     proposalaccessallowed = True
-    apiurl = "http://128.150.10.70/py/api/"
+    apiurl = "http://nsf.api.smetrics.org/v1/"
 
 #legend placeholders
 legend_topics = {} #this will come from the API

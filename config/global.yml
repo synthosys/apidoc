@@ -4,7 +4,7 @@ content_path: "/public/content/"
 resources: {
 	introduction: {
 		title: 'Introduction',
-		subhead: 'The STAR METRICS project is a partnership between science agencies and research institutions to document the outcomes of science investments to the public.',
+		subhead: 'The API was initially developed as a project for the chemistry department at NSF. It has now broadened as a tool for NSF in general.',
 		overview: {},
 		request: {
 			title : 'General Request Formula',

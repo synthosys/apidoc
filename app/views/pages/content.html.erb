@@ -14,7 +14,7 @@
 		<% end %>
 		<% if @request then %>
 		<div class="section" id="request">
-		<h2><%=@request['title']?@request['title']:'Request'%> <small><%=@request['subhead']?@request['title']:'Search for user information using the GET Method.'%></small></h2>
+		<h2><%=@request['title']?@request['title']:'Request'%> <small><%=@request['subhead']?@request['subhead']:'Search for user information using the GET Method.'%></small></h2>
 		<div>
 		<%=render :file=>"#{@content_path}/request.html"%>
 		</div>
@@ -22,7 +22,7 @@
 		<% end %>
 		<% if @result then %>
 		<div class="section" id="result">
-		<h2><%=@result['title']?@result['title']:'Result'%> <small><%=@result['subhead']?@result['title']:'Properties (meta data)'%></small></h2>
+		<h2><%=@result['title']?@result['title']:'Result'%> <small><%=@result['subhead']?@result['subhead']:'Properties (meta data)'%></small></h2>
 		<div>
 		<%=render :file=>"#{@content_path}/result.html"%>
 		</div>
@@ -30,7 +30,7 @@
 		<% end %>
 		<% if @connections then %>
 		<div class="section" id="connections">
-		<h2><%=@connections['title']?@connections['title']:'Connections'%> <small><%=@connections['subhead']?@connections['title']:'(linkages)'%></small></h2>
+		<h2><%=@connections['title']?@connections['title']:'Connections'%> <small><%=@connections['subhead']?@connections['subhead']:'(linkages)'%></small></h2>
 		<div>
 		<%=render :file=>"#{@content_path}/connections.html"%>
 		</div>
@@ -67,6 +67,3 @@
 		</div>		
 	</div> <!-- span3 -->
 </div>
-
-<script type="text/javascript">
-</script>
